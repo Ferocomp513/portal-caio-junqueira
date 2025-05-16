@@ -72,4 +72,43 @@
   <script>
     const btnMenu = document.getElementById('btn-menu');
     const menuLinks = document.getElementById('menu-links');
-    btn
+    btnMenu.addEventListener('click', () => {
+      menuLinks.classList.toggle('show');
+    });
+  </script>
+
+  <!-- Carregamento dinâmico de notícias -->
+  <script>
+    function carregarNoticias() {
+      const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4yCcrWz898V0VFr0kI2oBfMg96WflVWvxyKBj9vzFIJsxCNilHE0O7zMjoW53jcgCDy_6JpMQXAc9/pub?gid=0&single=true&output=csv";
+
+      Papa.parse(url, {
+        download: true,
+        header: true,
+        complete: function(result) {
+          const noticias = result.data;
+          const container = document.getElementById("noticias-container");
+          container.innerHTML = "";
+
+          noticias.forEach(noticia => {
+            if (noticia.titulo && noticia.data && noticia.resumo) {
+              const artigo = document.createElement("article");
+              artigo.classList.add("noticia");
+
+              artigo.innerHTML = `
+                <h3>${noticia.titulo}</h3>
+                <small><em>${noticia.data}</em></small>
+                <p>${noticia.resumo}</p>
+              `;
+              container.appendChild(artigo);
+            }
+          });
+        }
+      });
+    }
+
+    carregarNoticias();
+  </script>
+
+</body>
+</html>
