@@ -8,8 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header -->
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -31,8 +29,6 @@
       </div>
     </div>
   </header>
-
-  <!-- Navegação -->
   <nav>
     <div class="menu-topo">
       <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
@@ -52,8 +48,6 @@
       </a>
     </div>
   </nav>
-
-  <!-- Conteúdo principal -->
   <main>
     <section class="sobre">
       <div class="card">
@@ -64,23 +58,23 @@
       </div>
     </section>
   </main>
-
-  <!-- PapaParse CDN -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
-
-  <!-- Menu hambúrguer -->
   <script>
     const btnMenu = document.getElementById('btn-menu');
     const menuLinks = document.getElementById('menu-links');
     btnMenu.addEventListener('click', () => {
       menuLinks.classList.toggle('show');
     });
+<<<<<<< HEAD
   </script>
 
   <!-- Carregamento dinâmico de notícias -->
   <script>
+=======
+
+>>>>>>> df394c6 (Atualização da página de noticias)
     function carregarNoticias() {
-      const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS4yCcrWz898V0VFr0kI2oBfMg96WflVWvxyKBj9vzFIJsxCNilHE0O7zMjoW53jcgCDy_6JpMQXAc9/pub?gid=0&single=true&output=csv";
+const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSvmtBFPF_JMtdexeyx_OdE3jx4Zr9uWkMIjs_NRlms5ZNWVsdSwU9BNtrxUSaojMnlxw1O8nwFcTb6/pub?gid=164920548&single=true&output=csv";
 
       Papa.parse(url, {
         download: true,
@@ -110,5 +104,7 @@
     carregarNoticias();
   </script>
 
+</body>
+</html>
 </body>
 </html>
