@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Bairro Caio Junqueira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html" title="Início">
+          <img src="imagens/logo.png" alt="Logo do Bairro" class="logo">
+        </a>
+      </div>
+      <div class="header-text">
+        <h1>Fale Conosco</h1>
+        <h3>Estamos prontos para ouvir você</h3>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <div class="menu-topo">
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comercio.html">Comércio</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/seuperfil" target="_blank" title="Instagram">
+        <img src="imagens/instagram_logo.png" alt="Instagram" class="menu-icon">
+      </a>
+      <a href="https://www.facebook.com/seupagina" target="_blank" title="Facebook">
+        <img src="imagens/facebook_logo.png" alt="Facebook" class="menu-icon">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="sobre">
+      <div class="card">
+        <h2>Entre em contato</h2>
+        <p>Você pode anunciar seu negócio, enviar sugestões ou tirar dúvidas através dos nossos canais:</p>
+
+        <ul>
+          <li><strong>WhatsApp:</strong> <a href="https://wa.me/5535998277773" target="_blank">(35) 99827-7773</a></li>
+          <li><strong>E-mail:</strong> <a href="mailto:estrategiaatividade@gmail.com">estrategiaatividade@gmail.com</a></li>
+        </ul>
+
+        <div style="text-align: center; margin: 20px 0;">
+          <a href="https://wa.me/5535998277773" target="_blank" class="btn-anunciar">
+            💬 Fale conosco pelo WhatsApp
+          </a>
+        </div>
+
+        <h3>Formulário online</h3>
+        <p>Em breve você poderá preencher um formulário direto aqui mesmo. Enquanto isso, use os contatos acima.</p>
+
+        <!-- Espaço reservado para Google Forms -->
+        <div style="margin-top: 20px;">
+          <!-- Cole aqui seu iframe do Google Forms futuramente -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script do menu -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLinks = document.getElementById('menu-links');
+    btnMenu.addEventListener('click', () => {
+      menuLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>

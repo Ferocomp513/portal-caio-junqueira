@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notícias - Bairro Caio Junqueira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html" title="Início">
+          <img src="imagens/logo.png" alt="Logo do Bairro" class="logo">
+        </a>
+      </div>
+      <div class="header-text">
+        <h1>Notícias</h1>
+        <h3>O que está acontecendo no bairro</h3>
+        <div class="redes-header">
+          <a href="https://www.instagram.com/seuperfil" target="_blank" class="rede-link">
+            <img src="imagens/instagram_logo.png" alt="Instagram" class="rede-icon">
+          </a>
+          <a href="https://www.facebook.com/seupagina" target="_blank" class="rede-link">
+            <img src="imagens/facebook_logo.png" alt="Facebook" class="rede-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <div class="menu-topo">
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comercio.html">Comércio</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/seuperfil" target="_blank" title="Instagram">
+        <img src="imagens/instagram_logo.png" alt="Instagram" class="menu-icon">
+      </a>
+      <a href="https://www.facebook.com/seupagina" target="_blank" title="Facebook">
+        <img src="imagens/facebook_logo.png" alt="Facebook" class="menu-icon">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="sobre">
+      <div class="card">
+        <h2>Últimas do Bairro</h2>
+        <div id="noticias-container">
+          <p>Carregando notícias...</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PapaParse CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+  <!-- Menu hambúrguer -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLinks = document.getElementById('menu-links');
+    btn

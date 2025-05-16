@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bairro Caio Junqueira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html" title="Início">
+          <img src="imagens/logo.png" alt="Logo do Bairro" class="logo">
+        </a>
+      </div>
+      <div class="header-text">
+        <h1>
+          Bem-vindo ao Portal<br>
+          Bairro Caio Junqueira
+        </h1>
+        <h3>O bairro das árvores...</h3>
+        <div class="redes-header">
+          <a href="https://www.instagram.com/seuperfil" target="_blank" class="rede-link">
+            <img src="imagens/instagram_logo.png" alt="Instagram" class="rede-icon">
+          </a>
+          <a href="https://www.facebook.com/seupagina" target="_blank" class="rede-link">
+            <img src="imagens/facebook_logo.png" alt="Facebook" class="rede-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="menu-topo">
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comercio.html">Comércio</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+   
+  </nav>
+  <main>
+    <section class="sobre">
+      <div class="card">
+        <h2>Sobre o Bairro</h2>
+        <p>O bairro Caio Junqueira, localizado em Poços de Caldas, é conhecido por sua comunidade ativa e acolhedora. Este portal é dedicado a divulgar eventos, novidades e serviços disponíveis para os moradores.</p>
+        <p>É carinhosamente apelidado de <strong>"Bairro das Árvores"</strong> devido à característica marcante de suas ruas, que recebem nomes de espécies arbóreas, como <em>Rua dos Jacarandás</em>, <em>Rua das Mangueiras</em> e <em>Rua das Palmeiras</em>.</p>
+      </div>
+    </section>
+  </main>
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLinks = document.getElementById('menu-links');
+    btnMenu.addEventListener('click', () => {
+      menuLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comércio Local - Bairro Caio Junqueira</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html" title="Início">
+          <img src="imagens/logo.png" alt="Logo do Bairro" class="logo">
+        </a>
+      </div>
+      <div class="header-text">
+        <h1>Comércio Local</h1>
+        <h3>Fortalecendo quem faz o bairro acontecer</h3>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <div class="menu-topo">
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comercio.html">Comércio</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/seuperfil" target="_blank" title="Instagram">
+        <img src="imagens/instagram_logo.png" alt="Instagram" class="menu-icon">
+      </a>
+      <a href="https://www.facebook.com/seupagina" target="_blank" title="Facebook">
+        <img src="imagens/facebook_logo.png" alt="Facebook" class="menu-icon">
+      </a>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main>
+    <section class="sobre">
+      <div class="card">
+        <h2>Empresas do Bairro</h2>
+        <p>Conheça os comerciantes que movimentam o nosso bairro. Valorize quem está perto de você!</p>
+
+        <!-- Exemplo de comerciante -->
+        <div class="comerciante">
+          <img src="imagens/exemplo_loja.jpg" alt="Foto da Loja" class="comerciante-img">
+          <div class="comerciante-info">
+            <h3>Padaria São João</h3>
+            <p>Rua das Paineiras, nº 123</p>
+            <p>WhatsApp: (35) 9 9999-9999</p>
+            <a href="https://www.instagram.com/padariasaovao" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+        <!-- Botão para novos anúncios -->
+        <div style="text-align: center; margin-top: 30px;">
+          <a href="contato.html" class="btn-anunciar">📣 Quero anunciar aqui</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Script do menu -->
+  <script>
+    const btnMenu = document.getElementById('btn-menu');
+    const menuLinks = document.getElementById('menu-links');
+    btnMenu.addEventListener('click', () => {
+      menuLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
