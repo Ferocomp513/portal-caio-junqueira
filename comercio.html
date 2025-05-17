@@ -75,7 +75,8 @@
               card.innerHTML = `
                 <img src="${item.foto}" alt="${item.nome}" class="comercio-foto">
                 <h3>${item.nome}</h3>
-                <p>${item.endereco}</p>
+                <p><strong>Endereço:</strong> ${item.endereco}</p>
+                <p><strong>Telefone:</strong> ${item.telefone || "Não informado"}</p>
                 <div class="comercio-links">
                   <a href="${item.instagram}" target="_blank">Instagram</a>
                   <a href="${item.facebook}" target="_blank">Facebook</a>
