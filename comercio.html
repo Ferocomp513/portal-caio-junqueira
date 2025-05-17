@@ -9,18 +9,62 @@
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <div class="header-content">
+      <div class="logo-container">
+        <a href="index.html" title="Início">
+          <img src="imagens/logo.png" alt="Logo do Bairro" class="logo">
+        </a>
+      </div>
+      <div class="header-text">
+        <h1>Comércio Local</h1>
+        <h3>Descubra os estabelecimentos do bairro</h3>
+        <div class="redes-header">
+          <a href="https://instagram.com/seuperfil" class="rede-link" target="_blank">
+            <img src="imagens/instagram_logo.png" alt="Instagram" class="rede-icon" />
+          </a>
+          <a href="https://facebook.com/seupagina" class="rede-link" target="_blank">
+            <img src="imagens/facebook_logo.png" alt="Facebook" class="rede-icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <nav>
+    <div class="menu-topo">
+      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
+      <div class="menu-links" id="menu-links">
+        <a href="index.html">Início</a>
+        <a href="noticias.html">Notícias</a>
+        <a href="comercio.html">Comércio</a>
+        <a href="contato.html">Contato</a>
+      </div>
+    </div>
+    <div class="social-links">
+      <a href="https://instagram.com/seuperfil" target="_blank">
+        <img src="imagens/instagram_logo.png" class="menu-icon" alt="Instagram" />
+      </a>
+      <a href="https://facebook.com/seupagina" target="_blank">
+        <img src="imagens/facebook_logo.png" class="menu-icon" alt="Facebook" />
+      </a>
+    </div>
+  </nav>
+
+  <!-- Conteúdo principal -->
   <main>
     <section class="sobre">
       <div id="comercios-container">Carregando comércios...</div>
     </section>
   </main>
 
-  <!-- PapaParse para ler a planilha -->
+  <!-- PapaParse + Menu hambúrguer -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script>
     function carregarComercios() {
       const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRz4Ct1GtU9Fx55XkLKkXWLjwjsaOcLVHbod9Wy0YxxJ7Qh6nqaysDolWQCLIvO8pli6w6BEpObr6vq/pub?gid=0&single=true&output=csv";
-
       Papa.parse(url, {
         download: true,
         header: true,
@@ -54,7 +98,13 @@
       });
     }
 
-    carregarComercios();
+    // menu hambúrguer
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("btn-menu").addEventListener("click", () => {
+        document.getElementById("menu-links").classList.toggle("show");
+      });
+      carregarComercios();
+    });
   </script>
 
 </body>
