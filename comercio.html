@@ -8,57 +8,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <div class="logo-container">
-        <a href="index.html" title="Início">
-          <img src="imagens/logo.png" alt="Logo do Bairro" class="logo">
-        </a>
-      </div>
-      <div class="header-text">
-        <h1>Comércios Locais</h1>
-        <h3>Conheça os estabelecimentos do nosso bairro</h3>
-      </div>
-    </div>
-  </header>
-
-  <nav>
-    <div class="menu-topo">
-      <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
-      <div class="menu-links" id="menu-links">
-        <a href="index.html">Início</a>
-        <a href="noticias.html">Notícias</a>
-        <a href="comercio.html">Comércio</a>
-        <a href="contato.html">Contato</a>
-      </div>
-    </div>
-    <div class="social-links">
-      <a href="https://www.instagram.com/seuperfil" target="_blank">
-        <img src="imagens/instagram_logo.png" alt="Instagram" class="menu-icon">
-      </a>
-      <a href="https://www.facebook.com/seupagina" target="_blank">
-        <img src="imagens/facebook_logo.png" alt="Facebook" class="menu-icon">
-      </a>
-    </div>
-  </nav>
 
   <main>
     <section class="sobre">
-      <div class="card">
-        <h3>Estabelecimentos do Bairro</h3>
-        <div id="comercios-container">Carregando comércios...</div>
-      </div>
+      <div id="comercios-container">Carregando comércios...</div>
     </section>
   </main>
 
+  <!-- PapaParse para ler a planilha -->
   <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
   <script>
-    const btnMenu = document.getElementById('btn-menu');
-    const menuLinks = document.getElementById('menu-links');
-    btnMenu.addEventListener('click', () => {
-      menuLinks.classList.toggle('show');
-    });
-
     function carregarComercios() {
       const url = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRz4Ct1GtU9Fx55XkLKkXWLjwjsaOcLVHbod9Wy0YxxJ7Qh6nqaysDolWQCLIvO8pli6w6BEpObr6vq/pub?gid=0&single=true&output=csv";
 
@@ -74,12 +33,18 @@
               card.className = "comercio-card";
               card.innerHTML = `
                 <img src="${item.foto}" alt="${item.nome}" class="comercio-foto">
-                <h3>${item.nome}</h3>
-                <p><strong>Endereço:</strong> ${item.endereco}</p>
-                <p><strong>Telefone:</strong> ${item.telefone || "Não informado"}</p>
-                <div class="comercio-links">
-                  <a href="${item.instagram}" target="_blank">Instagram</a>
-                  <a href="${item.facebook}" target="_blank">Facebook</a>
+                <div class="comercio-dados">
+                  <h3>${item.nome}</h3>
+                  <p><strong>Endereço:</strong> ${item.endereco}</p>
+                  <p><strong>Telefone:</strong> ${item.telefone || "Não informado"}</p>
+                  <div class="redes-sociais">
+                    <a href="${item.instagram}" target="_blank" title="Instagram">
+                      <img src="imagens/instagram_logo.png" alt="Instagram">
+                    </a>
+                    <a href="${item.facebook}" target="_blank" title="Facebook">
+                      <img src="imagens/facebook_logo.png" alt="Facebook">
+                    </a>
+                  </div>
                 </div>
               `;
               container.appendChild(card);
@@ -91,5 +56,6 @@
 
     carregarComercios();
   </script>
+
 </body>
 </html>
