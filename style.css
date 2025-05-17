@@ -254,38 +254,59 @@ section h2 {
   font-size: 0.85rem;
 }
 
+/* Código fornecido pelo usuário */
+
+/* Estilo para cards com imagem à esquerda e dados à direita */
 .comercio-card {
-  background-color: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   padding: 15px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-.comercio-card h3 {
-  margin: 10px 0 5px;
-  color: #004b63;
-}
-.comercio-card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: left;
 }
 .comercio-foto {
-  max-width: 100%;
-  border-radius: 6px;
+  width: 200px;
   height: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
 }
-.comercio-links a {
+.comercio-dados {
+  padding-left: 20px;
+  flex: 1;
+}
+.comercio-dados h3 {
+  margin: 0 0 10px;
+  color: #004b63;
+}
+.comercio-dados p {
+  margin: 6px 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+.redes-sociais {
+  margin-top: 10px;
+}
+.redes-sociais a {
   display: inline-block;
-  margin: 8px 5px 0;
-  padding: 6px 12px;
-  background-color: #004b63;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 0.85rem;
+  margin-right: 10px;
 }
-.comercio-links a:hover {
-  background-color: #006e8a;
+.redes-sociais img {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
+}
+@media (max-width: 600px) {
+  .comercio-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .comercio-dados {
+    padding: 10px 0 0;
+    text-align: center;
+  }
 }
