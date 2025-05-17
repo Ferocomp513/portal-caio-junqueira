@@ -253,3 +253,39 @@ section h2 {
   color: #666;
   font-size: 0.85rem;
 }
+
+.comercio-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.comercio-card h3 {
+  margin: 10px 0 5px;
+  color: #004b63;
+}
+.comercio-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+.comercio-foto {
+  max-width: 100%;
+  border-radius: 6px;
+  height: auto;
+}
+.comercio-links a {
+  display: inline-block;
+  margin: 8px 5px 0;
+  padding: 6px 12px;
+  background-color: #004b63;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.85rem;
+}
+.comercio-links a:hover {
+  background-color: #006e8a;
+}
