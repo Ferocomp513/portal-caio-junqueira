@@ -8,6 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="header-content">
       <div class="logo-container">
@@ -16,22 +18,21 @@
         </a>
       </div>
       <div class="header-text">
-        <h1>
-          Bem-vindo ao Portal<br>
-          Bairro Caio Junqueira
-        </h1>
-        <h3>O bairro das árvores...</h3>
+        <h1>Bem-vindo ao Portal<br>Bairro Caio Junqueira</h1>
+        <h3>O bairro das árvores e da convivência!</h3>
         <div class="redes-header">
-          <a href="https://www.instagram.com/seuperfil" target="_blank" class="rede-link">
+          <a href="https://instagram.com/seuperfil" class="rede-link" target="_blank">
             <img src="imagens/instagram_logo.png" alt="Instagram" class="rede-icon">
           </a>
-          <a href="https://www.facebook.com/seupagina" target="_blank" class="rede-link">
+          <a href="https://facebook.com/seupagina" class="rede-link" target="_blank">
             <img src="imagens/facebook_logo.png" alt="Facebook" class="rede-icon">
           </a>
         </div>
       </div>
     </div>
   </header>
+
+  <!-- Navegação -->
   <nav>
     <div class="menu-topo">
       <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
@@ -42,23 +43,39 @@
         <a href="contato.html">Contato</a>
       </div>
     </div>
-   
+    <div class="social-links">
+      <a href="https://instagram.com/seuperfil" target="_blank">
+        <img src="imagens/instagram_logo.png" class="menu-icon" alt="Instagram" />
+      </a>
+      <a href="https://facebook.com/seupagina" target="_blank">
+        <img src="imagens/facebook_logo.png" class="menu-icon" alt="Facebook" />
+      </a>
+    </div>
   </nav>
+
+  <!-- Conteúdo principal com destaque visual -->
   <main>
     <section class="sobre">
       <div class="card">
         <h2>Sobre o Bairro</h2>
-        <p>O bairro Caio Junqueira, localizado em Poços de Caldas, é conhecido por sua comunidade ativa e acolhedora. Este portal é dedicado a divulgar eventos, novidades e serviços disponíveis para os moradores.</p>
-        <p>É carinhosamente apelidado de <strong>"Bairro das Árvores"</strong> devido à característica marcante de suas ruas, que recebem nomes de espécies arbóreas, como <em>Rua dos Jacarandás</em>, <em>Rua das Mangueiras</em> e <em>Rua das Palmeiras</em>.</p>
+        <p>O bairro Caio Junqueira, localizado em Poços de Caldas, é conhecido por sua comunidade ativa, ruas arborizadas e ambiente familiar. Este portal é dedicado a conectar moradores, divulgar eventos, notícias e serviços.</p>
+        <div class="galeria">
+          <img src="imagens/foto_bairro1.jpg" alt="Vista do bairro" class="foto-bairro">
+          <img src="imagens/foto_bairro2.jpg" alt="Praça arborizada" class="foto-bairro">
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="rodape">
+    <p>Site desenvolvido por <strong>Estratégia e Atividade</strong></p>
+  </footer>
+
   <script>
-    const btnMenu = document.getElementById('btn-menu');
-    const menuLinks = document.getElementById('menu-links');
-    btnMenu.addEventListener('click', () => {
-      menuLinks.classList.toggle('show');
+    document.getElementById("btn-menu").addEventListener("click", () => {
+      document.getElementById("menu-links").classList.toggle("show");
     });
   </script>
+
 </body>
 </html>
