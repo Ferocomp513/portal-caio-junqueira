@@ -283,8 +283,9 @@ section h2 {
   margin: 0 0 10px;
   color: #004b63;
 }
-.comercio-dados p {
+.comercio-dados  {
   margin: 6px 0;
+  padding-left: 20px;
   color: #333;
   font-size: 0.95rem;
 }
