@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bairro Caio Junqueira</title>
+  <title>Bairro Caio Junqueira - Portal Oficial</title>
+  <meta name="description" content="Portal oficial do bairro Caio Junqueira em Poços de Caldas. Notícias, comércios locais e serviços reunidos em um só lugar.">
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
 </head>
@@ -37,7 +38,7 @@
     <div class="menu-topo">
       <button class="hamburguer" id="btn-menu" aria-label="Abrir menu">☰</button>
       <div class="menu-links" id="menu-links">
-        <a href="index.html">Início</a>
+        <a href="index.html" class="active">Início</a>
         <a href="noticias.html">Notícias</a>
         <a href="comercio.html">Comércio</a>
         <a href="contato.html">Contato</a>
@@ -53,24 +54,31 @@
     </div>
   </nav>
 
-  <!-- Conteúdo principal com destaque visual -->
+  <!-- Conteúdo principal -->
   <main>
     <section class="sobre">
       <div class="card">
         <h2>Sobre o Bairro</h2>
-        <p>O bairro Caio Junqueira, localizado em Poços de Caldas, é conhecido por sua comunidade ativa, ruas arborizadas e ambiente familiar. Este portal é dedicado a conectar moradores, divulgar eventos, notícias e serviços.</p>
+        <p>Bem-vindo ao bairro mais arborizado e acolhedor de Poços de Caldas! Aqui, cada rua tem o nome de uma árvore e cada esquina guarda histórias de vizinhança, comércio local e tradição. Este portal foi criado para unir moradores, valorizar nossos empreendedores e mostrar tudo o que o Caio Junqueira tem de melhor.</p>
+        
         <div class="galeria">
-          <img src="imagens/foto_bairro1.jpg" alt="Vista do bairro" class="foto-bairro">
-          <img src="imagens/foto_bairro2.jpg" alt="Praça arborizada" class="foto-bairro">
+          <img src="imagens/banner_bem_vindo.jpg" alt="Vista do bairro" class="foto-bairro">
+          <img src="imagens/banner_comercio.jpg" alt="Praça arborizada" class="foto-bairro">
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="comercio.html" class="btn">Divulgue seu comércio aqui</a>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Rodapé -->
   <footer class="rodape">
-    <p>Site desenvolvido por <strong>Estratégia e Atividade</strong></p>
+    <p>Este site foi planejado e desenvolvido com estratégia, criatividade e impacto por <strong>Estratégia&Atividade</strong> — posicionando ideias locais no digital com autenticidade.</p>
   </footer>
 
+  <!-- Script menu -->
   <script>
     document.getElementById("btn-menu").addEventListener("click", () => {
       document.getElementById("menu-links").classList.toggle("show");

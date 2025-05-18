@@ -2,7 +2,8 @@
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
+  color: #333;
 }
 
 /* Header com imagem de fundo */
@@ -20,7 +21,6 @@ header {
   overflow: hidden;
 }
 
-/* Camada escura para contraste */
 header::before {
   content: "";
   position: absolute;
@@ -32,7 +32,6 @@ header::before {
   z-index: 0;
 }
 
-/* Conteúdo visível dentro do header */
 .header-content {
   position: relative;
   z-index: 1;
@@ -46,7 +45,6 @@ header::before {
   flex-wrap: wrap;
 }
 
-/* Logo à esquerda */
 .logo-container {
   flex: 1 1 30%;
   display: flex;
@@ -60,16 +58,16 @@ header::before {
   height: auto;
 }
 
-/* Texto à direita */
 .header-text {
   flex: 1 1 65%;
   text-align: left;
 }
 
 .header-text h1 {
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   line-height: 1.3;
   margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .header-text h3 {
@@ -77,7 +75,7 @@ header::before {
   font-weight: normal;
 }
 
-/* Botões sociais no topo */
+/* Redes sociais no topo */
 .redes-header {
   margin-top: 15px;
   display: flex;
@@ -142,6 +140,11 @@ nav {
   transition: color 0.3s, font-weight 0.3s;
 }
 
+.menu-links a.active {
+  font-weight: bold;
+  border-bottom: 2px solid #27AE60;
+}
+
 .menu-icon {
   width: 28px;
   height: 28px;
@@ -161,12 +164,21 @@ main {
   padding: 20px;
 }
 
+section {
+  margin-bottom: 40px;
+}
+
 .card,
 section {
   background-color: white;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card h2,
@@ -174,7 +186,7 @@ section h2 {
   margin-top: 0;
 }
 
-/* Responsivo para celular */
+/* Responsivo */
 @media (max-width: 768px) {
   .hamburguer {
     display: block;
@@ -185,7 +197,7 @@ section h2 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px; /* reduzido */
+    gap: 8px;
     padding: 5px 0;
     width: 100%;
   }
@@ -194,14 +206,12 @@ section h2 {
     display: flex;
   }
 
-   .menu-links a {
+  .menu-links a {
     padding: 6px 10px;
-    font-size: 0.82rem; /* reduzido */
+    font-size: 0.82rem;
     font-weight: 500;
     margin: 2px 4px;
     text-align: center;
-    border: none;
-    transition: color 0.3s, font-weight 0.3s;
   }
 
   .social-links {
@@ -220,7 +230,7 @@ section h2 {
   }
 
   .header-text h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
 
   .logo {
@@ -236,6 +246,8 @@ section h2 {
     justify-content: center;
   }
 }
+
+/* Notícia */
 .noticia {
   margin-bottom: 25px;
   border-bottom: 1px solid #ccc;
@@ -254,9 +266,7 @@ section h2 {
   font-size: 0.85rem;
 }
 
-/* Código fornecido pelo usuário */
-
-/* Estilo para cards com imagem à esquerda e dados à direita */
+/* Card de comércio */
 .comercio-card {
   display: flex;
   flex-wrap: wrap;
@@ -283,9 +293,7 @@ section h2 {
   margin: 0 0 10px;
   color: #004b63;
 }
-.comercio-dados  {
-  margin: 6px 0;
-  padding-left: 20px;
+.comercio-dados {
   color: #333;
   font-size: 0.95rem;
 }
@@ -311,6 +319,8 @@ section h2 {
     text-align: center;
   }
 }
+
+/* Galeria */
 .galeria {
   display: flex;
   gap: 20px;
@@ -322,4 +332,59 @@ section h2 {
   border-radius: 8px;
   width: calc(50% - 10px);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #27AE60;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+.btn:hover {
+  background-color: #219150;
+  transform: scale(1.03);
+}
+
+/* Destaque visual com imagem */
+.secao-destaque {
+  background-image: url("imagens/banner_bairro.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+.secao-destaque::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+.secao-destaque * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Rodapé */
+footer.rodape {
+  background-color: #2C3E50;
+  color: #ddd;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Legenda */
+.legenda {
+  font-size: 1rem;
+  color: #555;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  text-align: center;
 }
